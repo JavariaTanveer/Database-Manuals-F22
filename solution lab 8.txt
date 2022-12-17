@@ -1,0 +1,20 @@
+Task 1:
+select extension from employees inner join offices on employees.officeCode = offices.officeCode;
+Task 2:
+select customerName, payments.amount, addressLine1, addressLine2, city, state from customers inner join payments on customers.customerNumber = payments.customerNumber where amount > 30000;
+Task 3:
+select   productLine, orderdetails.quantityordered from products inner join orderdetails on products.productCode = orderdetails.productCode where quantityOrdered < 50;
+Task 4:
+select lastname, firstName, jobTitle, offices.city from employees inner join offices on employees.officeCode = offices.officeCode where city = 'Sydney';
+Task 5:
+select customerName, payments.amount from customers inner join payments on customers.customerNumber = payments.customerNumber where amount between 60000 and 70000;
+Task 6:
+select lastname, firstName, offices.city from employees inner join offices on employees.officeCode = offices.officeCode where city like  'S%';
+Task 7:
+select * from employees inner join offices on employees.officeCode = offices.officeCode where territory = 'Japan';
+Task 8:
+select customerName, orders.shippedDate, orders.status, orders.comments  from customers inner join orders on customers.customerNumber = orders.customerNumber where shippedDate like '%2003%';
+Task 9:
+select productDescription from products where productName like '%harley%';
+Task 10:
+select orderNumber, customers.contactFirstName, orderdetails.quantityOrdered from orderdetails inner join customers where contactFirstName like 'a%' and quantityOrdered > 50;

@@ -1,0 +1,46 @@
+create table Department(
+Dname varchar(20),
+Dnumber int,
+MgrSSN varchar(10),
+MgrStartDate date
+);
+
+create table dependent(
+ESSN varchar(10),
+DependentName varchar(20),
+Sex char(1),
+BDate date,
+RelationShip varchar(15)
+);
+
+create table DepartmentLocation(
+Dnumber int,
+DLoaction varchar(20)
+);
+
+create table Employee(
+Fname varchar(15),
+Minit char(1),
+LName varchar(15),
+SSN varchar(10),
+Bdate date,
+Address varchar(20),
+Sex char(1),
+Salary double,
+Super_SSN varchar(10),
+Dno int
+);
+
+create table project(
+Pname varchar(20),
+PNumber int,
+PLocation varchar(20),
+Dnum int
+);
+
+
+create table Works_On(
+ESSN varchar(10),
+Pno int,
+Hours float
+);

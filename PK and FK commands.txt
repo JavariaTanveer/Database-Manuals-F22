@@ -1,0 +1,46 @@
+                     PRIMARY KEYS      
+alter table employee
+add primary key(SSN);
+desc employee;
+
+alter table Department
+add primary key(DNumber);
+desc Department;
+
+alter table Departmentlocation
+add primary key(Dnumber,DLoaction);
+desc Departmentlocation;
+
+alter table project
+add primary key(PNumber);
+desc project;
+
+alter table works_on
+add primary key(ESSN);
+desc works_on;
+
+alter table dependent
+add primary key(ESSN,DependentName);
+desc dependent;
+
+                        FOREIGN KEYS
+
+alter table employee 
+add foreign key(Dno) references department(Dnumber);
+desc employee;
+
+alter table departmentlocation
+add foreign key(Dnumber) references department(Dnumber);
+desc departmentlocation;
+
+alter table project
+add foreign key(Dnum) references department(Dnumber);
+desc project;
+
+alter table works_on
+add foreign key(PNo) references project(PNumber);
+desc works_on;
+
+ALTER TABLE DEPENDENT
+add foreign key(ESSN) references employee(SSN);
+desc DEPENDENT;
